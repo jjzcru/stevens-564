@@ -22,6 +22,6 @@ Program where a person submit a project for a particular price and freelancers s
 
 A marketplace where students can buy and sell used books. In college most people use the same book for the same class and they will not used it again in their career, why spent more money if you can resell it to another student.
 
-### Courier Service App
+## Courier Service App
 
 Application where people can request to send a package to another person that are in a particular area.
