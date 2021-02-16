@@ -2,7 +2,7 @@
 
 Members:
 - [Thomas Ripp](#thomas-ripp)
-- Brandon Cruz 
+- [Brandon Cruz](#brandon-cruz)
 - [Joseph Mirabile](#joseph-mirabile)
 - [Jose Cruz](#jose-cruz)
 
@@ -22,6 +22,21 @@ Members:
 |           | 4:00PM - 6:00PM  |
 | Wednesday | After 2:00PM     |
 | Friday    | Free all Day     |
+
+
+## Brandon Cruz
+
+### Contact
+
+| Type  | Contact              |
+| :---- | :------------------- |
+| Email | <bcruz1@stevens.edu> |
+
+
+### Available Times
+| Day  | Time slots |
+| :--- | :--------- |
+| -    | -          |
 
 ## Joseph Mirabile
 
