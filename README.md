@@ -2,7 +2,6 @@
 
 Members:
 - [Thomas Ripp](#thomas-ripp)
-- [Brandon Cruz](#brandon-cruz)
 - [Joseph Mirabile](#joseph-mirabile)
 - [Jose Cruz](#jose-cruz)
 
