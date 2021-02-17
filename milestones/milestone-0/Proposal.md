@@ -3,7 +3,6 @@
 
 **Members**:
 - Thomas Ripp
-- Brandon Cruz 
 - Joseph Mirabile
 - Jose Cruz
 

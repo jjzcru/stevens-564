@@ -23,21 +23,6 @@ Members:
 | Wednesday | After 2:00PM     |
 | Friday    | Free all Day     |
 
-
-## Brandon Cruz
-
-### Contact
-
-| Type  | Contact              |
-| :---- | :------------------- |
-| Email | <bcruz1@stevens.edu> |
-
-
-### Available Times
-| Day  | Time slots |
-| :--- | :--------- |
-| -    | -          |
-
 ## Joseph Mirabile
 
 ### Contact
