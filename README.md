@@ -1,5 +1,7 @@
 # Team 4 
 
+**Current Milestone**: 0
+
 Members:
 - [Thomas Ripp](#thomas-ripp)
 - [Joseph Mirabile](#joseph-mirabile)
