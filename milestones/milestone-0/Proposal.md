@@ -8,7 +8,7 @@
 
 Ideas:
 - Bidding platform for freelancers
-- Marketplace for used books
+- Activity Finder
 - Courier Service App
 
 ---
@@ -35,35 +35,38 @@ is competition, and people who have the time and skills are able to make some
 money, and as a hosting platform we charge a fee for posting the job and 
 a service fee for every transaction.
 
-## Marketplace for used books
+## Activity Finder
 
 ### Context
-You are in College, you finish your courses, you get your A’s, now what do you 
-do with your textbooks?  You keep some, but there is one that you bought and 
-you know you are never going to use them again, why not sell them?
+Used for when someone doesn’t know what to do or what’s nearby when they’re 
+bored. Home alone and want to get out of the house or simply out of plans for 
+a hang out with friends. 
 
 ### Purpose
-If you are in a University your course material does not change frequently so 
-the next generation of students probably are going to use exactly the same 
-book, instead of making the publishing companies richer why don’t you help 
-save the environment by donating or selling your used books.
+Uses maps to locate nearby area for fun attractions such as rock climbing 
+or arcades. Can be filtered for specific interests.
 
 ### Business value
-Students who sell them get some money back, students who buy them get a book 
-for a cheap price, the environment also benefits, and for the platform? We get 
-money for each transaction.
+Companies found through the application would pay a fee to post content or 
+activities in the app. Enables users to purchase items or promotions from 
+businesses through the app.
 
 ## Courier Service App
 
 ### Context
-You have some time that you need to send urgently,  it is not a big package,  
-it is the size of the envelope, you can request a courier service to send a 
-package in a specific radius for a specific price.
+You have a small package that you want to send to someone, whether it be your 
+friend’s jacket you borrowed or documents that your coworker needs to get. 
+However, you are too busy or cannot be bothered to deliver these items 
+personally.
+
+That is when you request a courier service in your area to deliver 
+these items at a proportional rate to the distance the package must travel, 
+within reason. 
 
 ### Purpose
 Enable people to send packages without the need to fill out a form, wait 
 inline or go to a specific place to send a package nearby.
 
 ###  Business value
-We enable people to make money on the side and the platform collects a 
-fee on each transaction.
+We outsource the labor to available individuals who want to make extra 
+money and the platform collects a percentage of the rate for each transaction. 
