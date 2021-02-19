@@ -1,8 +1,9 @@
 # Team 4 
 
+**Current Milestone**: 0
+
 Members:
 - [Thomas Ripp](#thomas-ripp)
-- Brandon Cruz 
 - [Joseph Mirabile](#joseph-mirabile)
 - [Jose Cruz](#jose-cruz)
 

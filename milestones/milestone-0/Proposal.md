@@ -1,0 +1,69 @@
+# Project Proposal
+**Team**: 4
+
+**Members**:
+- Thomas Ripp
+- Joseph Mirabile
+- Jose Cruz
+
+Ideas:
+- Bidding platform for freelancers
+- Marketplace for used books
+- Courier Service App
+
+---
+
+## Bidding platform for freelancers
+
+### Context
+A lot of people have tasks that they would like to perform but either they are 
+too busy or too lazy to do them. The goal of this project is to create a 
+platform where people can submit tasks or projects they want and how much 
+they are willing to pay for it. 
+
+Other people can bid on how much they are willing to be paid to perform that 
+task, then the person who posts the task is going to choose a person from the 
+people who bid and that person is going to do the task.
+
+
+### Purpose
+Enable people to outsource their tasks, chores or projects.
+
+### Business Value
+People  who  post  the  project  could  get  a  cheaper  option  since  there  
+is competition, and people who have the time and skills are able to make some 
+money, and as a hosting platform we charge a fee for posting the job and 
+a service fee for every transaction.
+
+## Marketplace for used books
+
+### Context
+You are in College, you finish your courses, you get your A’s, now what do you 
+do with your textbooks?  You keep some, but there is one that you bought and 
+you know you are never going to use them again, why not sell them?
+
+### Purpose
+If you are in a University your course material does not change frequently so 
+the next generation of students probably are going to use exactly the same 
+book, instead of making the publishing companies richer why don’t you help 
+save the environment by donating or selling your used books.
+
+### Business value
+Students who sell them get some money back, students who buy them get a book 
+for a cheap price, the environment also benefits, and for the platform? We get 
+money for each transaction.
+
+## Courier Service App
+
+### Context
+You have some time that you need to send urgently,  it is not a big package,  
+it is the size of the envelope, you can request a courier service to send a 
+package in a specific radius for a specific price.
+
+### Purpose
+Enable people to send packages without the need to fill out a form, wait 
+inline or go to a specific place to send a package nearby.
+
+###  Business value
+We enable people to make money on the side and the platform collects a 
+fee on each transaction.
