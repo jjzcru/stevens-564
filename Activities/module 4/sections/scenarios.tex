@@ -126,6 +126,75 @@
 \end{itemize}
 
 \subsection{Unlock Scenario}
+\begin{itemize}
+    \item This scenario occurs when the system locks during an error during 
+    the checkout scenario.
+    \item Once the system alerts a trained worker to the error, the trained 
+    worker will approach the system to assist the user.
+    \item Once the worker assesses the problem and decides that it is good to 
+    proceed with the checkout scenario, the worker will input a special code 
+    that they will be given by system maintenance personnel. This code will 
+    automatically unlock the system for continued use by the user or the worker 
+    depending on the decision made by the worker.
+    \item This special code will be accessible to system maintenance personnel, 
+    administrative personnel, and the trained workers assigned to the 
+    system units.
+\end{itemize}
+
 \subsection{Shutdown Scenario}
+\begin{itemize}
+    \item This scenario occurs when it is the end of the day and the store is 
+    closing for the night and the system units are not in use.
+    \item A trained worker or administrator who is present at the time of 
+    closing will cancel any current checkout processes that are present on 
+    the system units.
+    \item The trained worker will indicate to the system that they wish to 
+    shutdown the unit.
+    \item The system will prompt the worker to provide their special 
+    code to the system.
+    \item The worker provides their special code to the system.
+    \item If the code check outs, the system will shut down.
+\end{itemize}
+
 \subsection{Maintenance Scenario}
+\begin{itemize}
+    \item This scenario occurs when the system requires some hardware or 
+    software maintenance.
+    \item System maintenance personnel, or IT, will have access to a key to 
+    open the unit to expose its hardware as well as their own code separate 
+    from the one provided to trained workers.
+    \item \textbf{System Not Yet Ready for Maintenance}
+    \begin{itemize}
+        \item IT will prompt the unit to receive their IT code. If code does 
+        not work, see Special Code Error Scenario.
+        \item The system will receive the code and go into a complete 
+        lockdown, terminating all processes.
+    \end{itemize}
+    \item IT will open the unit and expose the hardware of the system unit, 
+    including a port into the system’s software for all software maintenance 
+    as well as a system reboot button.
+    \item IT will then conduct all required maintenance on the unit.
+    \item Once maintenance is complete, IT will remove all equipment or any 
+    other items that do not belong in the unit. They will also remove their own 
+    machine from the unit’s software port if software maintenance was required.
+    \item IT will press the reboot button in the unit for the system to return 
+    to normal operations.
+    \item It will close and lock the unit shut, protecting the hardware again.
+\end{itemize}
+
 \subsection{Special Code Error Scenario}
+\begin{itemize}
+    \item This scenario occurs when a user attempts to provide the system with 
+    a special code but the system does not recognize the given code as a 
+    special one.
+    \item The system will prompt the user that the code is incorrect and to 
+    input the special code.
+    \item This process repeats until a correct special code is provided.
+    \item Multiple Incorrect Attempts
+    \begin{itemize}
+        \item After multiple incorrect attempts (the exact number of which is 
+        up to administration or system maintenance personnel), the system will 
+        completely lock, terminating all current processes, and will require 
+        system maintenance.
+    \end{itemize}
+\end{itemize}
