@@ -1,9 +1,131 @@
 \section{Operational Scenarios}
-\subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
+
+\subsection{Checkout Scenario}
+\begin{itemize}
+	\item The customer approaches the self-checkout system and starts 
+    the checkout process.
+	\item The system initializes the cart properly, allowing the user to 
+    scan and add items to the checkout list.
+    \item \textbf{Items Without a Barcode (eg. fresh produce) or 
+    Barcode Cannot Be Scanned}
+    \begin{itemize}
+        \item For these items, the user will use a built-in search 
+        function in the system.
+        \item The user will search for their item in the inventory manually.
+        \item Once they find their item, they will manually input the number 
+        of that item that they wish to add to their checkout and add it.
+        \item Exception
+        \begin{itemize}
+            \item If the user cannot find their item through the system, 
+            they will indicate this to the system.
+            \item The system will then alert a trained worker to the issue
+        \end{itemize}
+    \end{itemize}
+    \item The user scans their item and for every item scanned, the system 
+    checks the store’s inventory for what item is associated with 
+    the scanned barcode.
+    \item The system finds the item and adds the item to the checkout, 
+    signaling the user to add that item to the bagging area and to proceed
+    with scanning their other items.
+    \item \textbf{Exception - Item Cannot Be Found}
+    \begin{itemize}
+        \item The system cannot find an item in the store’s inventory with the 
+        barcode read in the scanner. 
+        \item It signals the user that the item scanned was not recognized by 
+        the scanner as an item. It also informs the user that the item was 
+        either not scanned properly or that the item does not belong 
+        in the cart.
+        \item The system will allow the user to rescan the item.
+        \item Exception
+        \begin{itemize}
+            \item If the user rescans multiple times (number of rescans at 
+            administrators choice) without success, the system will 
+            lock and alert a trained worker to the problem.
+            \item The system will unlock until the trained worker 
+            unlocks the system (See Unlock Scenario).
+        \end{itemize}
+    \end{itemize}
+    \item The system repeats the process until the user ends their 
+    checkout to proceed to payment. 
+    \item \textbf{User Wishes to Remove an Item from Checkout}
+    \begin{itemize}
+        \item The user will indicate to the system that they wish to 
+        remove an item from checkout.
+        \item The system will lock the scanner and then prompt the user to 
+        select which item or items that the user wishes to remove.
+        \item The user will indicate to the system which item and how much of 
+        the item they wish to remove, and the system will remove the item 
+        from checkout.
+        \item Note: The system will actively prevent the user from inputting a 
+        number greater than the amount of the item present in the checkout as 
+        well as one less than 0.
+        
+        \item Exception
+        \begin{itemize}
+            \item If the system receives a number greater than the amount of 
+            the item present in the checkout or a number less than 0, the 
+            system will lock and alert a trained worker.
+            \item The system will remain locked until unlocked by a trained 
+            worker, system maintenance personnel, or any other authorized 
+            personnel (See Unlock Scenario).
+        \end{itemize}
+        \item The system will then resume the normal scan scenario.
+    \end{itemize}
+    \item \textbf{User Wishes to Cancel Their Checkout}
+    \begin{itemize}
+        \item The user will indicate to the system that they wish to cancel 
+        their checkout.
+        \item The system will prompt the user to confirm that they wish 
+        to do so.
+        \item If the user confirms, then the system will prompt an employee 
+        to come and collect the items the user had already scanned 
+        and not scanned.
+    \end{itemize}
+    \item When the user wishes to checkout, they will prompt the system to 
+    end the scanning process.
+    \item The system will lock the scanner and prompt the user to choose a 
+    payment method of either cash, debit, or credit.
+    \item \textbf{Cash}
+    \begin{itemize}
+        \item The system will start the hardware to receive the currency. 
+        The system will prompt the user to insert the appropriate bills and 
+        coins to fulfill the cost of the checkout.
+        \item The user inserts the currency into the hardware for counting. 
+        The system will continue to prompt the user with the remaining cost 
+        of the cart until the amount inserted is at least equal to the 
+        total cost.
+        \item {\it User Inserts More Than The Cost}
+        \begin{itemize}
+            \item The system will indicate to the user that they will receive 
+            change from the coin and bill slots on the hardware. The system 
+            will indicate to the internal currency register how much must be 
+            taken out for change,
+            \item The system withdraws from the register to give to the user.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Debit and Credit}
+    \begin{itemize}
+        \item The system will prompt the user to follow the instructions 
+        presented on card terminal.
+        \item The system communicates with the terminal as for how much the 
+        user needs to pay to cover the cost.
+        \item The terminal carries out the transaction, where the user swipes 
+        their credit card or inserts their debit card.
+        \item Exception - Card Declined
+        \begin{itemize}
+            \item The system will indicate to the user that their card 
+            was declined.
+            \item The system will then prompt the user to choose their payment 
+            method again. This process will repeat until the user cancels 
+            their checkout or the user covers the cost.
+        \end{itemize}
+    \end{itemize}
+    \item Once the transaction is completed, the system will print a receipt 
+    for the user of their checkout list and end the checkout process.
+    \item The system will reset itself for another user.
+\end{itemize}
+
+\subsection{Unlock Scenario}
+\subsection{Shutdown Scenario}
+\subsection{Maintenance Scenario}
+\subsection{Special Code Error Scenario}
