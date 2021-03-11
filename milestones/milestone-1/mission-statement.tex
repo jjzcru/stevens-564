@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\def\arraystretch{1.2}%
+\usepackage[a4paper,
+	bindingoffset=0.2in,%
+        left=1.2in,
+        right=1.2in,
+        top=1.2in,
+        bottom=0.5in,%
+        footskip=.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{xltxtra,fontspec,xunicode}
+\setromanfont[Numbers=Uppercase]{Inter}
+\defaultfontfeatures{Scale=MatchLowercase}
+
+{
+    \fontfamily{lmss}\selectfont 
+
+    %opening
+    \title{
+        Personalized Shopping Assistant \\ 
+        \small Team 4
+    }
+
+    \author{
+        Thomas Ripp
+        \and 
+        Joseph Mirabile
+        \and 
+        Jose Cruz
+    }
+
+    \date{
+        Stevens Institute of Technology \\
+        \small\today
+    } 
+
+    \begin{document}
+    \maketitle
+    \tableofcontents
+    \pagebreak
+}
+
+
+\input{./sections/business-requeriments.tex}
+\pagebreak
+\input{./sections/scope-limitations.tex}
+\pagebreak
+\input{./sections/business-context.tex}
+\pagebreak
+
+\end{document}
