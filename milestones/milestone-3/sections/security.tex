@@ -1,0 +1,30 @@
+\section{Security Requirement}
+
+\begin{enumerate}[label=SEC-\arabic*]
+    \item The PSS shall require an email and password access to log in
+    \item PSS password must no less than 8 characters, 1 special character, and 2 numbers.
+    \item The PSS shall not store passwords in plain text, it shall salt the passwords and encrypt using SHA-2 algorithm
+    \item The PSS shall display an error message in the case of a failure in a transaction in order to protect customer data
+    \item The PSS shall allow customers to file any reports with their orders by sending an email to the support email address with the order number and issue details.
+    \item The PSS shall ask the customer whether or not their order has arrived if it is 1 hour after they create the order
+    \item The PSS shall allow users to delete their own account, this is also shared with the PSMS and the PSDS
+    \item The PSS shall allow users to disable their own accounts for a certain period of time up to 1 year
+    \item The PSS shall not store any credit card information, it will use an authorized, PCI Compliant, provider. (PayPal).
+    \item The PSS shall ignore all network request that comes outside of US.
+    \item The PSSS shall log all information regarding the server status into a log file.
+    \begin{enumerate}[label=SEC-11.\arabic*]
+        \item PSSS shall log the utilized RAM every 5 minutes 
+        \item PSSS shall log the utilized CPU every 5 minutes
+        \item PSSS shall log all search queries
+    \end{enumerate}
+\end{enumerate}
+\pagebreak
+
+\begin{enumerate}[resume, label=SEC-\arabic*]
+    \item PSSS shall considered that a request is coming from a secure environment if the communication protocol is HTTPS and a valid JWT is sent in `Authorization` header
+    \item A security audit shall be performed in all the dependencies that are add it to the project
+    \item A system security audit should be performed each year
+    \item The PSD shall have a 2 factor authentication procedure as an option
+    \item PSMS requires 2FA procedure for authentication
+    \item The PSD shall only allow the driver to log in from one device at a time
+\end{enumerate}
