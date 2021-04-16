@@ -46,7 +46,6 @@
     \item No more than 5 orders out of 1,000 can be lost due to software errors.
     \item The PSSS shall not be down for more than 3600 consecutive seconds.
 \end{enumerate}
-\pagebreak
 \subsection{Robustness}
 Offline means the software is running but it lose internet connections 
 with the application server.
@@ -57,6 +56,10 @@ with the application server.
     \item If a message is sent from PSDS to PSSS and PSDS is offline, PSDS is 
     going to store the message in a queue and send the message 
     when it reconnects.
+\end{enumerate}
+
+\pagebreak
+\begin{enumerate}[resume, label=ROB-\arabic*]
     \item If a message is sent from PSS to PSSS and PSS is offline, PSS is 
     going to store the message in a queue and send the message 
     when it reconnects.
@@ -64,18 +67,13 @@ with the application server.
     an error message in case a required input field is empty.
 \end{enumerate}
 
-\pagebreak
 
 
 \subsection{Usability}
-Supported OAuth accounts: Google, Facebook, Apple.
+Supported OAuth accounts: Google, Facebook, Apple. \newline
  
-For the context of usability a workflow is going to be any combination of 
+\noindent For the context of usability a workflow is going to be any combination of 
 views, buttons, actions and inputs that helps a user to achieve a goal.
-
-Interaction: Amount of touches required by the user to perform an action, if 
-the device has a touch screen, or the amount of clicks a user performs, if the
-device has a non-touch screen.
 
 \begin{enumerate}[label=USE-\arabic*]
     \item A first time user of PSS shall be able to create an order, with a 
@@ -94,17 +92,15 @@ device has a non-touch screen.
     than 5 seconds
     \item A first time user of PSDS shall be able to accept an order in no 
     longer than 10 seconds
+\end{enumerate}
+\pagebreak
+\begin{enumerate}[resume, label=USE-\arabic*]
     \item A first time user of PSDS shall be able to deny an order in no 
     longer than 10 seconds
     \item A first time user of PSDS shall be able to logout in no longer 
     than 5 seconds
     \item A first time user of PSDS shall be able to mark that it’s on its 
     way to the merchant store, in no longer than 3 seconds
-\end{enumerate}
-
-\pagebreak
-
-\begin{enumerate}[resume, label=USE-\arabic*]
     \item A first time user of PSDS shall be able to mark that it’s on its 
     way to the costumer, in no longer than 3 seconds
     \item A first time user of PSMS shall be able to add a new product in 
