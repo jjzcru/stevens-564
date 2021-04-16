@@ -1,0 +1,53 @@
+\section{Terms, definitions and abbreviated terms}
+\subsection{Terms and definitions}
+\begin{itemize}
+    \item \textbf{OAuth}:
+    \item \textbf{Firebase Cloud Messaging}:
+    \item \textbf{Customer}:
+    \item \textbf{Merchant}:
+    \item \textbf{Driver}:
+    \item \textbf{Order}:
+    \item \textbf{Cart}:
+    \item \textbf{Estimated time of Arrival}:
+\end{itemize}
+
+\subsection{Abbreviated Terms}
+\begin{itemize}
+    \item \textbf{PSS}: Personal Shopper System
+    \item \textbf{PSMS}: Personal Shopper Merchant System
+    \item \textbf{PSDS}: Personal Shopper Driver System
+    \item \textbf{PSSS}: Personal Shopper Server System
+    \item \textbf{FCM}: Firebase Cloud Messaging
+    \item \textbf{ETA}: Estimated time of Arrival
+\end{itemize}
+
+\pagebreak
+
+\subsection{Assumptions and dependencies}
+\begin{enumerate}[label=AS-\arabic*]
+    \item The drivers are already sign up in the system when they send their 
+    driver application to the company
+    \item The merchants are added into to the system outside of the 
+    application scope
+    \item The merchants are going to submit products that are appropriate for 
+    all ages. \textit{They are not going to upload drugs, guns, 
+    medical devices or sex toys}
+    \item The merchants are already sign a contract that specify the types of 
+    products they can add in the platform
+    \item The merchants are stores with less than 5 employees
+    \item All the merchants, costumers and drivers operate inside the 
+    Hoboken area
+    \item PSS, PSMS, PSDS only talk with PSSS, using a 
+    request-response approach
+    \item PSS have two versions mobile which is Android and a Web version
+    \item Notifications in PSS (Mobile/Web) and PSDS are going to use FCM
+\end{enumerate}
+
+\subsection{Operating Environment}
+\begin{enumerate}[label=OE-\arabic*]
+    \item The PSSS is going to run on AWS infrastructure
+    \item Image assets are going to be stored in AWS S3
+    \item New servers are going to be spin up on demand using EC2 VMS
+    \item The PSSS can only be accessed by PSS, PSMS, PSDS 
+    \item Network requests coming from outside of US are going to be ignored
+\end{enumerate}
