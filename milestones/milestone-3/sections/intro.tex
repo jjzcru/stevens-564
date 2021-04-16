@@ -24,17 +24,29 @@
     used to grand access to a website or application, if two or more pieces of 
     evidence confirm the user identity.
 \end{itemize}
-
+\pagebreak
 \subsection{Abbreviated Terms}
-\begin{itemize}
-    \item \textbf{PSS}: Personal Shopper System
-    \item \textbf{PSMS}: Personal Shopper Merchant System
-    \item \textbf{PSDS}: Personal Shopper Driver System
-    \item \textbf{PSSS}: Personal Shopper Server System
-    \item \textbf{FCM}: Firebase Cloud Messaging
-    \item \textbf{ETA}: Estimated time of Arrival
-    \item \textbf{2FA}: 2-Factor Authentication
-\end{itemize}
+\begin{center}
+    \begin{tabular}{p{0.40\textwidth}p{0.60\textwidth}}
+    \hline
+    \textbf{Abbreviation} & \textbf{Term} \\ 
+     \hline
+     PSS & Personal Shopper System \\  
+     \hline
+     PSMS &  Personal Shopper Merchant System \\  
+     \hline
+     PSDS &  Personal Shopper Driver System \\  
+     \hline
+     PSSS &  Personal Shopper Server System \\  
+     \hline
+     FCM &  Firebase Cloud Messaging \\  
+     \hline
+     ETA & Estimated time of Arrival \\  
+     \hline
+     2FA & 2-Factor Authentication  \\  
+     \hline
+    \end{tabular}
+\end{center}
 
 \pagebreak
 
@@ -46,16 +58,19 @@
     application scope
     \item The merchants are going to submit products that are appropriate for 
     all ages. \textit{They are not going to upload drugs, guns, 
-    medical devices or sex toys}
+    medical devices}
     \item The merchants are already sign a contract that specify the types of 
     products they can add in the platform
     \item Customers do not have support for 2FA
+    \item Merchants required 2FA
+    \item Drivers have 2FA as an option
+    \item A driver session can only run on one device at a time
     \item PSS, PSMS, PSDS only talk with PSSS, using a 
     request-response approach.
 \end{enumerate}
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.70]{Logical Data Model.png}
+    \includegraphics[scale=0.50]{Logical Data Model.png}
     \caption{Logical Data Model}
 \end{figure}
 
