@@ -34,9 +34,10 @@
         \item PSS shall display an error message if the one of the fields is 
         empty or their format is incorrect.
         \item PSS shall display an error message if the email and password 
-        do not matched the previsouly store credential
+        do not matched the previsouly store credential.
         \item PSS shall display a message that suggest the user to sign up
-        in case the email address that they insert do not exist in the platform
+        in case the email address that they insert do not exist in the 
+        platform.
     \end{enumerate}
     \item The PSS shall enable customers to login into the platform by using 
     authorized public OAuth implementation:
@@ -46,7 +47,7 @@
     \end{itemize}
 
     \item PSS shall display a "Sign out" button, that enable customers to close 
-    their current session
+    their current session.
     \pagebreak
     \item PSS shall display a list of all the available merchants
     \begin{enumerate}[label=SY6-\arabic*]
@@ -54,9 +55,9 @@
         device GPS, and request all the registered merchants that are in a 
         2 mile radius from the customer position.
         \item If no merchants are found, it displays the message "No merchants 
-        are in your area"
+        are in your area".
         \item PSS shall display the merchants as 
-        cards \cite{material-design-cards}
+        cards. \cite{material-design-cards}
         \item PSS shall display merchant information: 
         \begin{itemize}
             \item Name
@@ -69,7 +70,7 @@
     \item PSS shall display what is the customer current location 
     inside a map.
     \item When the customer is inside a merchant page, PSS shall enable the 
-    customer to search a product
+    customer to search a product.
     \begin{enumerate}[label=SY8-\arabic*]
         \item PSS shall show a list of products, that matches the search, 
         and display the following fields.
@@ -81,29 +82,29 @@
     \end{enumerate}
     \end{enumerate}
     \begin{enumerate}[resume, label=SY-\arabic*]
-    \item PSS shall enable customers to add a product to the cart
+    \item PSS shall enable customers to add a product to the cart.
     \item PSS shall enable customers to add their payment information 
-    into the platform
+    into the platform.
     \item When the cart has one or more items, PSS shall permit the user to 
-    create an order
-    \item PSS shall permit customer to cancel an order
-    \item PSS shall permit customer to confirm that they received an order
+    create an order.
+    \item PSS shall permit customer to cancel an order.
+    \item PSS shall permit customer to confirm that they received an order.
     \item If the customer forgets its password, PSS shall request to user to 
-    enter its email address and shall an email with a temporary password
+    enter its email address and shall an email with a temporary password.
     \item If there is an issue with an order, PSS shall enable customers to 
-    open an ticket about the order
-    \item PSS shall enable user to send a message to the driver
+    open an ticket about the order.
+    \item PSS shall enable user to send a message to the driver.
     \item PSS shall display drivers information:
     \begin{itemize}
         \item Phone Number
         \item Name
         \item Profile Picture
     \end{itemize}
-    \item PSS shall display the ETA from a pending order
+    \item PSS shall display the ETA from a pending order.
     \begin{enumerate}[label=SY18-\arabic*]
-        \item PSS shall display the ETA in terms of minutes
+        \item PSS shall display the ETA in terms of minutes.
     \end{enumerate}
-    \item PSS shall display merchants information
+    \item PSS shall display merchants information.
     \begin{itemize}
         \item Name
         \item Phone 
@@ -114,9 +115,21 @@
 \pagebreak
 \subsection{Personal Shopper Merchant}
 \begin{enumerate}[resume, label=SY-\arabic*]
-    \item PSMS shall enable merchants to login into the platform by 
-    using email and password
-    \item PSMS shall enable merchants to close an existing session
+    \item PSMS shall enable merchants to login into the platform.
+    \begin{enumerate}[label=SY20-\arabic*]
+        \item PSMS shall request the user to input the following required 
+        fields:
+        \begin{itemize}
+            \item Email
+            \item Password
+        \end{itemize}
+        \item PSMS shall display an error message if the one of the fields is 
+        empty or their format is incorrect.
+        \item PSMS shall display an error message if the email and password 
+        do not matched the previsouly store credential.
+    \end{enumerate}
+    \item PSMS shall display a "Sign out" button, that enable merchants to 
+    close their current session.
     \item PSMS shall enable merchants to add a product, by requesting the 
     following required fields.
     \begin{itemize}
@@ -125,17 +138,21 @@
         \item Picture
         \item Weight
     \end{itemize}
-    \item PSMS shall enable merchants to update a selected product
-    \item PSMS shall enable merchants to delete a selected product
-    \begin{itemize}
+    \item PSMS shall enable merchants to update a selected product.
+    \item PSMS shall enable merchants to delete a selected product.
+    \begin{enumerate}[label=SY24-\arabic*]
         \item PSMS shall display a message dialog that request a confirmation 
-        from the merchant
-    \end{itemize}
-    \item PSMS shall enable merchants to disable a product
+        from the merchant. It display the message and two buttons that say
+        "Delete" in color red which deletes the product, and secondary button 
+        with the text "Cancel" which closes the dialog without deleting the 
+        product.
+    \end{enumerate}
+    \item PSMS shall enable merchants to disable a selected product.
     \item PSMS shall enable merchant to enable products that were 
-    previously disabled
+    previously disabled.
     \item If the merchant forgets its password, PSMS shall request to user 
-    to enter its email address and shall an email with a temporary password
+    to enter its email address and PSMS shall send an email with a 
+    temporary password.
 \end{enumerate}
 \pagebreak
 \subsection{Personal Shopper Driver}
