@@ -1,43 +1,85 @@
 \section{System Requirements}
 \subsection{Personal Shopper}
 \begin{enumerate}[label=SY-\arabic*]
-    \item PSS shall enable a customers to register by requesting the 
-    following fields:
-    \begin{itemize}
-        \item Name
-        \item Last name
-        \item Phone number
-        \item Email
-        \item Password
-    \end{itemize}
-    \item PSS shall enable customers to signup into the platform by using  
+    \item PSS shall enable a customers to sign up:
+    \begin{enumerate}[label=SY1-\arabic*]
+        \item PSS shall request that customer fill their information by
+        writing inside input text requesting the following fields:
+        \begin{itemize}
+            \item Name
+            \item Last name
+            \item Phone number
+            \item Email
+            \item Password
+            \item Confirm Password
+        \end{itemize}
+        \item PSS shall display an error message if the one of the fields is 
+        empty or their format is incorrect or the passwords do not match.
+    \end{enumerate}
+    \item PSS shall enable customers to signup into the platform by using an 
     authorized public OAuth implementation:
     \begin{itemize}
-        \item Google
-        \item Apple
+        \item Google Sign-in \cite{google-sign-in}
+        \item Sign in with Apple \cite{sign-in-with-apple}
     \end{itemize}
 
-    \item PSS shall enable customers to login into the platform by 
-    using email and password
+    \item PSS shall enable customers to login into the platform 
+    \begin{enumerate}[label=SY3-\arabic*]
+        \item PSS shall request the user to input the following required 
+        fields:
+        \begin{itemize}
+            \item Email
+            \item Password
+        \end{itemize}
+        \item PSS shall display an error message if the one of the fields is 
+        empty or their format is incorrect.
+        \item PSS shall display an error message if the email and password 
+        do not matched the previsouly store credential
+        \item PSS shall display a message that suggest the user to sign up
+        in case the email address that they insert do not exist in the platform
+    \end{enumerate}
     \item The PSS shall enable customers to login into the platform by using 
     authorized public OAuth implementation:
     \begin{itemize}
-        \item Google
-        \item Apple
+        \item Google Sign-in \cite{google-sign-in}
+        \item Sign in with Apple \cite{sign-in-with-apple}
     \end{itemize}
 
-    \item PSS shall enable customers to close an existing session
+    \item PSS shall display a "Sign out" button, that enable customers to close 
+    their current session
+    \pagebreak
     \item PSS shall display a list of all the available merchants
+    \begin{enumerate}[label=SY6-\arabic*]
+        \item PSS shall request the customer current location by using the 
+        device GPS, and request all the registered merchants that are in a 
+        2 mile radius from the customer position.
+        \item If no merchants are found, it displays the message "No merchants 
+        are in your area"
+        \item PSS shall display the merchants as 
+        cards \cite{material-design-cards}
+        \item PSS shall display merchant information: 
+        \begin{itemize}
+            \item Name
+            \item Address
+            \item Image
+            \item Phone
+            \item Distance between the customer and the merchant, in meters.
+        \end{itemize}
+    \end{enumerate}
     \item PSS shall display what is the customer current location 
-    inside a map
+    inside a map.
     \item When the customer is inside a merchant page, PSS shall enable the 
     customer to search a product
-    \begin{itemize}
-        \item PSS shall display a list of products that show the name, image 
-        and short description that matches a search
-    \end{itemize}
+    \begin{enumerate}[label=SY8-\arabic*]
+        \item PSS shall show a list of products, that matches the search, 
+        and display the following fields.
+        \begin{itemize}
+            \item Product name
+            \item Image 
+            \item Short description
+        \end{itemize}
     \end{enumerate}
-    \pagebreak
+    \end{enumerate}
     \begin{enumerate}[resume, label=SY-\arabic*]
     \item PSS shall enable customers to add a product to the cart
     \item PSS shall enable customers to add their payment information 
@@ -58,9 +100,9 @@
         \item Profile Picture
     \end{itemize}
     \item PSS shall display the ETA from a pending order
-    \begin{itemize}
+    \begin{enumerate}[label=SY18-\arabic*]
         \item PSS shall display the ETA in terms of minutes
-    \end{itemize}
+    \end{enumerate}
     \item PSS shall display merchants information
     \begin{itemize}
         \item Name
