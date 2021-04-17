@@ -23,6 +23,11 @@
     \item \textbf{2FA}: Authentication method in which a particular device is 
     used to grand access to a website or application, this method requires 
     two or more pieces of evidence that confirms the user identity.
+    \item \textbf{JWT}: An open standard method for representing claims 
+    securely between two parties.
+    \item \textbf{PCI}: set of security standards designed to ensure that ALL 
+    companies that accept, process, store or transmit credit card 
+    information maintain a secure environment. \cite{pci}
 \end{itemize}
 \pagebreak
 
@@ -46,6 +51,18 @@
      \hline
      2FA & 2-Factor Authentication  \\  
      \hline
+     JWT & JSON Web Token  \\  
+     \hline
+     JSON & JavaScript Object Notation \\ 
+     \hline
+     PCI & Payment Card Industry \\ 
+     \hline
+     VM & Virtual Machine \\ 
+     \hline
+     AWS & Amazon Web Services \\ 
+     \hline
+     CI & Continuous Integration \\ 
+     \hline
     \end{tabular}
 \end{center}
 
@@ -62,7 +79,7 @@
     medical devices}.
     \item The merchants are already sign a contract that specify the types of 
     products they can add in the platform.
-    \item Customers do not require 2FA.
+    \item Customers do not require 2FA \cite{2fa}.
     \item Merchants require 2FA.
     \item Drivers have 2FA as an option.
     \item A driver session, for a specific driver, can only run on one 
@@ -76,13 +93,12 @@
     \caption{Logical Data Model}
 \end{figure}
 
-\pagebreak
-
 \begin{enumerate}[resume, label=AS-\arabic*]
     \item Merchants are small businesses that usually have no more 
     than 5 employees in a single shift.
     \item All the merchants, customers and drivers operate inside the 
     Hoboken area.
+    \pagebreak
     \item PSS have two versions mobile which is Android and a Web version.
     \item PSMS has only a web version.
     \item PSDS has only an Android version.
@@ -94,11 +110,11 @@
 
 \subsection{Operating Environment}
 \begin{enumerate}[label=OE-\arabic*]
-    \item The PSSS is going to run on AWS infrastructure
-    \item Image assets are going to be stored in AWS S3
-    \item New servers are going to be spin up on demand using EC2 VMS
-    \item The PSSS can only be accessed by PSS, PSMS, PSDS 
-    \item Network requests coming from outside of US are going to be ignored
+    \item The PSSS is going to run on AWS infrastructure.
+    \item Image assets are going to be stored in AWS S3.
+    \item New servers are going to be spin up on demand using EC2 VMS.
+    \item The PSSS can only be accessed by PSS, PSMS, PSDS.
+    \item Network requests coming from outside of US are going to be ignored.
 \end{enumerate}
 \begin{figure}[!htb]
     \centering

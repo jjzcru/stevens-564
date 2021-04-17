@@ -1,8 +1,9 @@
 \section{System Requirements}
+
 \subsection{Personal Shopper}
 \begin{enumerate}[label=SY-\arabic*]
     \item PSS shall enable a customers to sign up:
-    \begin{enumerate}[label=SY1-\arabic*]
+    \begin{enumerate}[label=SY-1.\arabic*]
         \item PSS shall request that customer fill their information by
         writing inside input text requesting the following fields:
         \begin{itemize}
@@ -22,9 +23,8 @@
         \item Google Sign-in \cite{google-sign-in}
         \item Sign in with Apple \cite{sign-in-with-apple}
     \end{itemize}
-
-    \item PSS shall enable customers to login into the platform 
-    \begin{enumerate}[label=SY3-\arabic*]
+    \item PSS shall enable customers to login into the platform .
+    \begin{enumerate}[label=SY-3.\arabic*]
         \item PSS shall request the user to input the following required 
         fields:
         \begin{itemize}
@@ -45,12 +45,11 @@
         \item Google Sign-in \cite{google-sign-in}
         \item Sign in with Apple \cite{sign-in-with-apple}
     \end{itemize}
-
     \item PSS shall display a "Sign out" button, that enable customers to close 
     their current session.
     \pagebreak
-    \item PSS shall display a list of all the available merchants
-    \begin{enumerate}[label=SY6-\arabic*]
+    \item PSS shall display a list of all the available merchants.
+    \begin{enumerate}[label=SY-6.\arabic*]
         \item PSS shall request the customer current location by using the 
         device GPS, and request all the registered merchants that are in a 
         2 mile radius from the customer position.
@@ -71,7 +70,7 @@
     inside a map.
     \item When the customer is inside a merchant page, PSS shall enable the 
     customer to search a product.
-    \begin{enumerate}[label=SY8-\arabic*]
+    \begin{enumerate}[label=SY-8.\arabic*]
         \item PSS shall show a list of products, that matches the search, 
         and display the following fields.
         \begin{itemize}
@@ -101,7 +100,7 @@
         \item Profile Picture
     \end{itemize}
     \item PSS shall display the ETA from a pending order.
-    \begin{enumerate}[label=SY18-\arabic*]
+    \begin{enumerate}[label=SY-18.\arabic*]
         \item PSS shall display the ETA in terms of minutes.
     \end{enumerate}
     \item PSS shall display merchants information.
@@ -112,11 +111,13 @@
         \item Address
     \end{itemize}
 \end{enumerate}
+
 \pagebreak
+
 \subsection{Personal Shopper Merchant}
 \begin{enumerate}[resume, label=SY-\arabic*]
     \item PSMS shall enable merchants to login into the platform.
-    \begin{enumerate}[label=SY20-\arabic*]
+    \begin{enumerate}[label=SY-20.\arabic*]
         \item PSMS shall request the user to input the following required 
         fields:
         \begin{itemize}
@@ -140,7 +141,7 @@
     \end{itemize}
     \item PSMS shall enable merchants to update a selected product.
     \item PSMS shall enable merchants to delete a selected product.
-    \begin{enumerate}[label=SY24-\arabic*]
+    \begin{enumerate}[label=SY-24.\arabic*]
         \item PSMS shall display a message dialog that request a confirmation 
         from the merchant. It display the message and two buttons that say
         "Delete" in color red which deletes the product, and secondary button 
@@ -154,42 +155,56 @@
     to enter its email address and PSMS shall send an email with a 
     temporary password.
 \end{enumerate}
+
 \pagebreak
+
 \subsection{Personal Shopper Driver}
 \begin{enumerate}[resume, label=SY-\arabic*]
     \item  The PSDS shall enable merchants to login into the platform by 
-    using email and password
-    \item  The PSDS shall enable merchants to close an existing session
-    \item  If the driver forgets its password, PSMS shall request to user to 
-    enter its email address and shall an email with a temporary password
-    \item  If the driver receives an order requests, PSDS shall request to 
-    press a button with the title "Accept" to accept an order
-    \item  If the driver receives an order requests, PSDS shall request to 
-    press a button with the title "Decline" to accept an order
-    \item  If the driver already accept an order, PSDS shall enabled the 
-    user to decline the order
-    \item  PSDS shall enable the driver to mark an order as delivered
+    using an email address and a password.
+    \begin{enumerate}[label=SY-28.\arabic*]
+        \item PSDS shall request the user to input the following required 
+        fields:
+        \begin{itemize}
+            \item Email
+            \item Password
+        \end{itemize}
+        \item PSDS shall display an error message if the one of the fields is 
+        empty or their format is incorrect.
+        \item PSDS shall display an error message if the email and password 
+        do not matched the previsouly store credential.
+    \end{enumerate}
+    \item PSDS shall display a "Sign out" button, that enable merchants to 
+    close their current session.
+    \item  If the driver forgets its password, PSDS shall request to user to 
+    enter its email address and shall an email with a temporary password.
+    \item  If the driver receives an order requests, PSDS shall request the 
+    driver to press a button with the title "Accept" to accept an order.
+    \item  If the driver receives an order requests, PSDS shall request the 
+    driver to press a button with the title "Decline" to accept an order.
+    \item  If the driver fulfills the order, PSDS shall enable the driver to 
+    mark the order as delivered.
 	\item  If the driver mark an order as delivered, PSDS shall request the 
-    user to take a picture of the delivery.
+    driver to take a picture of the delivery.
     \item  PSDS shall enable the driver to press a button that sends a signal 
     to PSSS that notifies to the customer that the driver it's on its 
-    way to the merchant
+    way to the merchant.
     \item  PSDS shall enable the driver to press a button that sends a signal 
     to PSSS that notifies to the customer that the driver it's at the 
-    merchant and it's working in the order
+    merchant and it's working in the order.
     \item  PSDS shall enable the driver to press a button that sends a signal 
     to PSSS that notifies the customer that the driver it's on its way to the 
-    deliver the order to the customer
+    deliver the order to the customer.
     \item  If the driver requires to reach out to the driver, PSDS shall 
-    display the phone number of the customer
+    display the phone number of the customer.
 \end{enumerate}
 \pagebreak
 \begin{enumerate}[resume, label=SY-\arabic*]
     \item  PSDS shall display a list of all the orders that the drivers 
-    performer in the last 30 days
-    \item  PSDS shall display what is the driver current location inside a map
+    performer in the last 30 days.
+    \item  PSDS shall display what is the driver current location inside a map.
     \item  If the driver requires technical support, PSDS shall display a 
-    technical support phone number
+    technical support phone number.
 \end{enumerate}
 
 \begin{figure}[!htb]
