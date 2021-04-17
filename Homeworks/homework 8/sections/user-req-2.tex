@@ -1,0 +1,57 @@
+\section{The user shall be able to deposit checks into their account via 
+the application}
+\begin{enumerate}
+    \item The system shall confirm that the user has logged in and has a valid 
+    session
+    \begin{itemize}
+        \item If the user is not logged in, the system shall redirect the user 
+        to the login screen
+	    \item If the user session expired, the system shall redirect the user 
+        to the login screen
+    \end{itemize}
+    \item The system shall enable the user to select the account to deposit
+    \item The system shall prompt the user to input the amount that is going to 
+    be deposit
+    \item The system shall enable the user to select \textbf{check} as a 
+    deposit method
+    \item The system shall request authorization to the user to use the camera
+    \begin{itemize}
+        \item If the user declines the authorization, the system should display 
+        an error message 
+        \item If the device do not have a camera module or the camera module is 
+        damage, the system should display an error message
+    \end{itemize}
+    \item  The system shall display a message to the user requesting to take a 
+    picture of the check
+    \item The system shall request the user to take a picture from the front  
+    and the back of the check
+    \item The system shall validate that the check is center and fit in the 
+    picture frame
+    \item The system shall validate that the check is filled
+    \item The system shall validate that the check is endorsed
+    \item The system shall validate that all the information in the check is 
+    filled and valid
+    \pagebreak
+    \item The system shall validate that the account number in the check 
+    matches the selected account number
+    \item The system shall validate that the amount in the check matches the 
+    amount the user input
+    \item The system shall display a message that the information is valid
+    \item The system shall prompt the user to confirm the deposit
+    \item The system shall perform a deposit transaction in the remote banking 
+    service
+    \begin{itemize}
+        \item If the system do not have a stable connection with the remote 
+        banking service, the system should display an error message
+    \end{itemize}
+    \item The system shall display a message if the transaction was successful
+    \begin{itemize}
+        \item If the transaction failed, the system should display an error 
+        message
+    \end{itemize}	
+    \item The system shall display a summary of the transaction
+    \item The system shall display an option to the user to deposit another 
+    check
+    \item The system shall display an option to the user to return to the main 
+    screen
+\end{enumerate}

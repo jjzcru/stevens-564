@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\def\arraystretch{1.2}%
+\newenvironment{packed_enum}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packed_dict}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\usepackage[a4paper,
+	bindingoffset=0.2in,%
+        left=1.2in,
+        right=1.2in,
+        top=1in,
+        bottom=0.5in,%
+        footskip=.25in]{geometry}
+{
+    \fontfamily{lmss}\selectfont 
+
+    %opening
+    \title{
+        Defining System Requirements \\ 
+        \small Team 4
+    }
+
+    \author{
+        Thomas Ripp
+        \and 
+        Joseph Mirabile
+        \and 
+        Jose Cruz
+    }
+
+    \date{
+        Stevens Institute of Technology \\
+        \small\today
+    } 
+
+    \begin{document}
+    \maketitle
+    \tableofcontents
+    \pagebreak
+}
+\input{./sections/user-req-1.tex}
+\pagebreak
+\input{./sections/user-req-2.tex}
+
+\end{document}

@@ -1,0 +1,40 @@
+\section{The user shall be able to pay their bills from their account balance}
+\begin{enumerate}
+    \item The system shall confirm that the user has logged in and has a 
+    valid session
+    \begin{itemize}
+        \item If the user is not logged in, the system shall redirect the user 
+        to the login screen
+        \item If the user session expired, the system shall redirect the user 
+        to the login screen
+    \end{itemize}
+    \item The system shall display a list of all the bills 
+    \item The system shall apply different colors for paid and unpaid bills
+    \item The system shall display a counter for the amount of paid and unpaid 
+    bills
+    \item The system shall enable the user to select a bill to see more details 
+    \item The system shall enable the user to pay a selected bill from a 
+    particular account
+    \item The system shall validate if the account selected by the user has 
+    enough funds to pay the selected bill
+    \begin{itemize}
+        \item If the account do not have enough funds, the system should 
+        display an error message
+	    \item If the account is frozen, the system should display an error 
+        message
+    \end{itemize}
+    \item The system shall prompt the user to confirm the bill payment
+    \item The system shall display a success message if the transaction was 
+    successful 
+    \begin{itemize}
+        \item If the transaction failed, the system shall display an error 
+        message to the user
+    \end{itemize}
+    \item The system shall enable the user to return to the view with all the 
+    bills from a selected bill
+    \pagebreak
+    \item The system shall prevent the user from paying bills that were already 
+    paid
+    \item The system shall display an error message if the system do not have 
+    an stable connection with the bank system
+\end{enumerate}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\def\arraystretch{1.2}%
+\newenvironment{packed_enum}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packed_dict}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\usepackage[a4paper,
+	bindingoffset=0.2in,%
+        left=1.2in,
+        right=1.2in,
+        top=1in,
+        bottom=0.5in,%
+        footskip=.25in]{geometry}
+{
+    \fontfamily{lmss}\selectfont 
+
+    %opening
+    \title{
+        Commonality Analysis \\ 
+        \small Team 4
+    }
+
+    \author{
+        Thomas Ripp
+        \and 
+        Joseph Mirabile
+        \and 
+        Jose Cruz
+    }
+
+    \date{
+        Stevens Institute of Technology \\
+        \small\today
+    } 
+
+    \begin{document}
+    \maketitle
+    \tableofcontents
+    \pagebreak
+}
+\input{./sections/context.tex}
+\pagebreak
+\input{./sections/dictionary.tex}
+\pagebreak
+\input{./sections/commonalities.tex}
+\input{./sections/variabilities.tex}
+\pagebreak
+\input{./sections/parameters-of-variation.tex}
+\pagebreak
+\input{./sections/out-of-scope.tex}
+
+\end{document}
