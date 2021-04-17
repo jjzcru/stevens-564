@@ -27,15 +27,15 @@
 \pagebreak
 \subsection{Performance}
 \begin{enumerate}[label=PER-\arabic*]
-    \item The PSS (Web) shall take no longer than 2s when loading a page.
-    \item The PSS (Mobile) shall take no longer than 3s when loading a view. 
-    \item The PSS shall take no longer than 2 seconds when searching for 
+    \item The PSSS (Web) shall take no longer than 2s when loading a page.
+    \item The PSSS (Mobile) shall take no longer than 3s when loading a view. 
+    \item The PSSS shall take no longer than 2 seconds when searching for 
     products.
-    \item The PSS shall take no longer than 5 seconds when the customer 
+    \item The PSSS shall take no longer than 5 seconds when the customer 
     pay for the order.
-    \item The PSS shall take no longer than 5 seconds when the customer 
+    \item The PSSS shall take no longer than 5 seconds when the customer 
     log in.
-    \item The PSS shall take no longer than 3 seconds to logout.
+    \item The PSSS shall take no longer than 3 seconds to logout.
     \item The PSDS shall take no longer than 3 seconds to accept an order.
     \item The PSDS shall take no longer than 3 seconds to reject an order.
 \end{enumerate}
@@ -45,10 +45,9 @@
     \item No more than 5 orders out of 1,000 can be lost due to software errors.
     \item The PSSS shall not be down for more than 3600 consecutive seconds.
 \end{enumerate}
-
 \subsection{Robustness}
-For the context of PSDS, PSMS, PSS offline means: \textit{The software is 
-running but it lose internet connection with the application server.}
+Offline means the software is running but it lose internet connections 
+with the application server.
 
 \begin{enumerate}[label=ROB-\arabic*]
     \item If PSDS goes offline, it will try to reconnect to PSMS in 
@@ -56,6 +55,10 @@ running but it lose internet connection with the application server.}
     \item If a message is sent from PSDS to PSSS and PSDS is offline, PSDS is 
     going to store the message in a queue and send the message 
     when it reconnects.
+\end{enumerate}
+
+\pagebreak
+\begin{enumerate}[resume, label=ROB-\arabic*]
     \item If a message is sent from PSS to PSSS and PSS is offline, PSS is 
     going to store the message in a queue and send the message 
     when it reconnects.
@@ -70,67 +73,74 @@ Supported OAuth accounts:
     \item Sign in with Apple
 \end{itemize}
  
-\noindent For the context of usability a workflow is: \textit{ Any combination 
-of views, buttons, actions and inputs that helps a user to achieve a goal}.
+\noindent \textit{For the context of usability a workflow is going to be any 
+combination of views, buttons, actions and inputs that helps a user 
+to achieve a goal}.
 
 \begin{enumerate}[label=USE-\arabic*]
     \item A first time user of PSS shall be able to create an order, with a 
-    cart already filled, in no longer than 3 seconds.
+    cart already filled, in no longer than 3 seconds
     \item A first time user of PSS shall be able to sign up in no longer 
-    than 2 minutes.
+    than 2 minutes
     \item A first time user of PSS shall be able to sign up in no longer 
-    than 20 seconds, if the user have a supported OAuth account.
+    than 20 seconds, if the user have a supported OAuth account
     \item A first time user of PSS shall be able to sign in no longer 
-    than 5 seconds.
+    than 5 seconds
     \item A first time user of PSS shall be able to sign in no longer 
-    than 3 seconds, if the user have a supported OAuth account.
+    than 3 seconds, if the user have a supported OAuth account
     \item A first time user of PSS shall be able to search for an item and 
-    add it to the cart in no longer than 20 seconds.
+    add it to the cart in no longer than 20 seconds
     \item A first time user of PSDS shall be able to sign in no longer 
-    than 5 seconds.
+    than 5 seconds
     \item A first time user of PSDS shall be able to accept an order in no 
-    longer than 10 seconds.
+    longer than 10 seconds
+\end{enumerate}
+\pagebreak
+\begin{enumerate}[resume, label=USE-\arabic*]
     \item A first time user of PSDS shall be able to deny an order in no 
-    longer than 10 seconds.
+    longer than 10 seconds
     \item A first time user of PSDS shall be able to logout in no longer 
-    than 5 seconds.
+    than 5 seconds
     \item A first time user of PSDS shall be able to mark that it’s on its 
-    way to the merchant store, in no longer than 3 seconds.
+    way to the merchant store, in no longer than 3 seconds
     \item A first time user of PSDS shall be able to mark that it’s on its 
-    way to the costumer, in no longer than 3 seconds.
+    way to the costumer, in no longer than 3 seconds
     \item A first time user of PSMS shall be able to add a new product in 
     no longer than 2 minutes.
     \item A first time user of PSMS shall be able to remove a product in 
     no longer than 15 seconds.
     \item A first time user of PSMS shall be able to update a product in 
-    no longer than 1 minute.
+    no longer than 1 minute
     \item A first time user of PSMS shall be able to login in no longer 
-    than 5 seconds.
+    than 5 seconds
     \item A first time user of PSMS shall be able to logout in no longer 
-    than 5 seconds.
+    than 5 seconds
     \item A single workflow would be consider user-friendly as long as the 
     user makes 4 mistakes or less out of 100 times repeating the same workflow. 
     \textit{A mistake is any action that the user performs that he didn’t 
     intent to (E.g. Button miss clicks, invalid characters on input fields, 
-    wrong text format)}.
+    wrong text format)}
     \item For the systems PSMS, PSS, PSDS, 98\% of first time users should be 
     able to use the applications without needing any help.
     \item A user of PSS should be able to create an order from an already 
-    filled car in no more than 4 interactions.
+    filled car in no more than 4 interactions
     \item A user of PSS should be able to create an order from an empty cart 
     in no more than 8 interactions. For an order of a single item.
+\end{enumerate}
+\pagebreak
+\begin{enumerate}[resume, label=USE-\arabic*]
     \item A user of PSDS should be able to complete a delivery in no more 
-    than 2 interactions.
+    than 2 interactions
     \item A user of PSDS should be able to signal a customer that it’s on its 
-    way to the store in no more than 2 interactions.
+    way to the store in no more than 2 interactions
     \item A user of PSDS should be able to signal a customer that it’s on its
-    way to the complete the order in no more than 2 interactions.
+    way to the complete the order in no more than 2 interactions
     \item A user of PSMS should be able to add a product in no more 
-    than 2 interactions.
+    than 2 interactions
     \item A user of PSMS should be able to update a product in no more 
-    than 2 interactions.
+    than 2 interactions
     \item A user of PSS should be able to edit their own profile in no more 
-    than 2 interactions.
+    than 2 interactions
     
 \end{enumerate}
 
@@ -138,39 +148,39 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
 \begin{enumerate}[label=EFF-\arabic*]
     \item The PSSS should have at least 30\% of processor capacity and memory 
     available to the application shall be un-usued at the planned 
-    peak load conditions.
+    peak load conditions
 \end{enumerate}
-
-\pagebreak
 
 \subsection{Modifiability}
 \begin{enumerate}[label=MOD-\arabic*]
-    \item Classes must follow the SOLID principles. \cite{solid}
-    \item Functions calls required at least 80\% of testing code coverage.
-    \item Public functions must be above protected functions.
-    \item Protected functions must be above private functions.
-    \item All merges to master must come from the CI server.
-    \item All test must pass before pushing changes to the remote repository.
+    \item Classes must follow the SOLID principles \cite{solid}
+    \item Functions calls required at least 80\% of testing code coverage
+    \item Public functions must be above protected functions
+    \item Protected functions must be above private functions
+    \item All merges to master must come from the CI server
+    \item All test must pass before pushing changes to the remote repository
     \item All changes push to a release branch must be peer-reviewed.
     \item Public and protected functions must include a comment that explains 
-    the functionality.
-    \item Variable must be descriptive in nature, abbreviations must be 
-    avoided.
+    the functionality
+\end{enumerate}
+\pagebreak
+\begin{enumerate}[resume, label=MOD-\arabic*]
+    \item Variable must be descriptive in nature, abbreviations must be avoided
     \item Constants must be all uppercase, if the constant have more than one 
-    word they would be separated by an underscore.
-    \item Functions and variables must begin with a lower case.
-    \item Classes will be capitalize.
-    \item Variables and functions must be written in camel case.
-    \item Composition must be preferred over inheritance.
+    word they would be separated by an underscore
+    \item Functions and variables must begin with a lower case
+    \item Classes will be capitalize
+    \item Variables and functions must be written in camel case
+    \item Composition must be preferred over inheritance
     \item Lines would not exceed more than 80 characters, including white 
-    spaces.
-    \item Code format should be applied before committing.
+    spaces
+    \item Code format should be applied before committing
 \end{enumerate}
 
 \subsection{Portability}
 \begin{enumerate}[label=POR-\arabic*]
     \item Modifying the Android version to the latest version shall require 
-    changing no more than 5\% of the source code.
+    changing no more than 5\% of the source code
     \item PSMS, PSS (Web) shall support:
     \begin{itemize}
         \item Chrome 89, 88, 87
@@ -191,9 +201,9 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     \item At least 45\% of application architecture shall be reused 
     between PSS (Mobile) and PSDS.
     \item 2FA (2-Factor Authentication) mechanism shall be shared across 
-    all the systems.
+    all the systems
     \item JWT token signing and token rotation mechanism shall be shared 
-    across all the systems.
+    across all the systems
 \end{enumerate}
 
 \subsection{Scalability}
@@ -213,7 +223,7 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     production configuration environment to avoid irreproducible 
     testing failures.
     \item A tester shall be able to configure if the application is 
-    running in testing, develop or production mode.
+    running in testing, develop or production mode
 \end{enumerate}
 \pagebreak
 \subsection{Constraints}
@@ -221,9 +231,10 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     \item Developers can only use open source libraries or tools that are 
     either Apache or MIT license.
     \item Google Pay and Apple Pay are the only supported payment providers
-    \item The data interchange format must be JSON.
+    \item The data interchange format must be JSON
     \item The authentication/authorization mechanism between applications 
-    is going to be JWT.
-    \item JWT tokens are going to expired after 24 hours.
-    \item The database that is going to be used in the project must be MySQL.
+    is going to be JWT
+    \item JWT tokens are going to expired after 24 hours
+    \item The database that is going to be used in the project must be MySQL
 \end{enumerate}
+\pagebreak
