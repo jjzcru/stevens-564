@@ -1,0 +1,43 @@
+@startuml
+header Team 4
+title Personal Shopping Assistant
+caption Mobile
+footer PSS
+
+rectangle "Home page" as home
+rectangle "Display Cart" as cart
+rectangle "Display product detail" as product_detail 
+rectangle "Display Merchant details" as merchant_detail
+rectangle "Search product" as search_product 
+rectangle "Display product search results" as search_product_results
+rectangle "Shipping Address Page" as shipping_address
+rectangle "Payment Method" as payment_method
+rectangle "Confirmation Page" as confirmation
+rectangle "In Progress Page" as in_progress
+rectangle "Order details page" as order_detail
+
+home --> cart : "Click on cart icon"
+home --> merchant_detail : "Click on merchant"
+
+merchant_detail -> product_detail : "Click on product"
+merchant_detail -> search_product : "Click on search icon"
+
+search_product --> search_product_results: "User starts typing"
+search_product_results --> product_detail: "Click on product"
+
+product_detail --> cart: "Click on add to cart"
+cart -> home: "Click 'Back' icon"
+cart -> shipping_address: "Click 'Proceed to checkout'"
+shipping_address --> cart: "Click 'Cancel'"
+shipping_address --> payment_method: "Click 'Confirm address'"
+payment_method --> shipping_address: "Click 'Back' Icon"
+payment_method --> confirmation: "Click 'Confirm payment method'"
+confirmation --> payment_method: "Click 'Back' Icon"
+confirmation --> in_progress: "Click confirm"
+
+in_progress -> order_detail
+order_detail --> home: "Click Continue"
+
+
+
+@enduml
