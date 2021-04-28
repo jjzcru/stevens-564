@@ -1,8 +1,8 @@
 @startuml
-header Team 4
-title Personal Shopping Assistant
+header Personal Shopping Assistant
+title Personal Shopper System
 caption Mobile
-footer PSS
+footer Team 4
 
 rectangle "Home page" as home
 rectangle "Display Cart" as cart
@@ -16,7 +16,7 @@ rectangle "Confirmation Page" as confirmation
 rectangle "In Progress Page" as in_progress
 rectangle "Order details page" as order_detail
 
-home --> cart : "Click on cart icon"
+home -> cart: "Click on cart"
 home --> merchant_detail : "Click on merchant"
 
 merchant_detail -> product_detail : "Click on product"
@@ -26,13 +26,9 @@ search_product --> search_product_results: "User starts typing"
 search_product_results --> product_detail: "Click on product"
 
 product_detail --> cart: "Click on add to cart"
-cart -> home: "Click 'Back' icon"
-cart -> shipping_address: "Click 'Proceed to checkout'"
-shipping_address --> cart: "Click 'Cancel'"
-shipping_address --> payment_method: "Click 'Confirm address'"
-payment_method --> shipping_address: "Click 'Back' Icon"
-payment_method --> confirmation: "Click 'Confirm payment method'"
-confirmation --> payment_method: "Click 'Back' Icon"
+cart <-> shipping_address
+shipping_address <--> payment_method
+payment_method <--> confirmation
 confirmation --> in_progress: "Click confirm"
 
 in_progress -> order_detail
