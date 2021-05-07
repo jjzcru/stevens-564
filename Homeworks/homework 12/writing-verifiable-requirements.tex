@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{dirtytalk}
+\usepackage{mdwlist}
+\usepackage{enumitem}
+\def\arraystretch{1.2}%
+\newenvironment{packed_enum}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\newenvironment{packed_dict}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}  
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+\usepackage[a4paper,
+	bindingoffset=0.2in,%
+        left=1.2in,
+        right=1.2in,
+        top=1in,
+        bottom=0.5in,%
+        footskip=.25in]{geometry}
+{
+    \fontfamily{lmss}\selectfont 
+
+    %opening
+    \title{
+        Writing verifiable requirements
+    }
+
+    \author{
+        Jose Cruz
+    }
+
+    \date{
+        Stevens Institute of Technology \\
+        \small\today
+    } 
+
+    \begin{document}
+    \maketitle
+}
+
+\section{Key Objectives}
+The main objective of this application is to enable content creators to upload 
+videos in a short format, no longer than 15 seconds, and to have viewers to be 
+able watch, download, comment and like the content published by the creators.
+
+\section{Requirements}
+\subsection{User Requirements}
+\begin{enumerate}[label=U-\arabic*]
+    \item As a creator I want to publish videos.
+    \item As a viewer I want to be able navigate between videos.
+    \item As a viewer I want download videos from the application.
+\end{enumerate}
+
+\subsection{System Requirements}
+\begin{enumerate}[label=SY-\arabic*]
+    \item The system shall enable viewers and creators to comment on a video.
+    \item If a video that is playing ends, the system shall repeat the video 
+    from the beginning.
+    \item If the creator enables it, the system shall allow a viewer to 
+    download a video.
+\end{enumerate}
+
+\pagebreak
+
+\subsection{Quality Requirements}
+\subsubsection{Usability}
+\begin{enumerate}[label=USE-\arabic*]
+    \item A user shall be able to navigate between videos using gestures.
+    \begin{enumerate}[label=USE-1.\arabic*]
+        \item \textbf{Swipe Up}: To view the next video in the queue
+        \item \textbf{Swipe Down}: To view the previous video in the queue, 
+        if its the first video in the queue, the system shall empty the queue 
+        and fetch new videos.
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Portability}
+\begin{enumerate}[label=POR-\arabic*]
+    \item At least 70\% of the code base should be share between the Android
+    and iOS source code. \textit{Programming Language: Kotlin}
+\end{enumerate}
+
+\subsubsection{Performance}
+\begin{enumerate}[label=PER-\arabic*]
+    \item The application should take no longer than 3 seconds to load the 
+    main screen while on Wi-Fi and no longer than 5 seconds while on 
+    cellphone data (4G).
+\end{enumerate}
+
+\pagebreak
+
+\section{Requirement Feasibility}
+\textbf{SY-3} - \say{If the creator enables it, the system shall allow a 
+viewer to download a video} 
+
+\subsection{Assumptions}
+\begin{itemize}
+    \item The video loaded successfully
+    \item The application is caching on disk a video that was previously loaded.
+    \item The device has a functional touch screen.
+    \item The application is not frozen. \textit{Do not respond to user input}.
+    \item The device have enough disk space to store the video.
+    \item The device have enough available RAM to perform the download.
+    \item The application have access to the device file system.
+    \item The user allows the application `Write to disk` permission.
+\end{itemize}
+
+\subsection{Description}
+If all the assumptions happens, the video is already in cache of the device, 
+both iOS and Android have a sandbox area in the file system, so the application
+do not have direct access to the main device file system, since the user 
+already allows access to the application to write to the main file system, the 
+only thing that we need to do is copy the file from the sandbox area to main
+device file system. As long as the device have enough storage 
+to save the video twice, once in the cache and the other one in the file 
+system, the application should be able to export the video.
+
+\pagebreak
+
+\section{Requirement Verifiability}
+\textbf{USE-1} - \say{A user shall be able to navigate between videos 
+using gestures.}
+
+
+\subsection{Test Case 1: Regular Flow}
+The user touch the application icon from the home screen in their device, the 
+application load the splash screen, the application start rendering the layout,
+while it loads the video in the background, the video start playing, 
+the user swipe up, the current video stop playing and disappears going up while 
+the next video takes the place of the previous one, and start loading the video 
+content. The user swipe down, the current video stop playing and disappear by 
+moving to the bottom, the previous video comes from the top and starts playing.
+
+\subsection{Test Case 2: Pull to refresh}
+The user touch the application icon from the home screen in their device, the 
+application load the splash screen, the application start rendering the layout,
+while it loads the video in the background, the video starts playing, the user 
+swipe down, the application displays a loading animation on top of the video, 
+the video stop playing, a new video takes the place of the existing video and 
+starts playing. In the background the application empty the previous video 
+queue, and fetch a new one.
+
+\end{document}
