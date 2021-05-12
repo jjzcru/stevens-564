@@ -66,3 +66,19 @@ This is a far lengthier dissertation on your elicitation process than what is re
 Did you elicit requirements from anyone other than the proposing team (Samantha, Timothy, Alex and Kristin)?
 
 You appear to believe that your repeated meetings with your customers took care of your need to insure requirement clarity, comprehensibility, consistency, and correctness. Reviews of the actual written requirements are usually needed for that.
+
+
+Structure:
+------------------
+1. Your team name, your software project name, and your mission statement
+2. Clearly identify the key stakeholders for the project
+3. Key business/mission drivers - what drove you to think that this solution is needed/useful (what is your motivation to do this)
+4. Key constraints - what constraints did you need to consider for your project
+5.Key requirements:
+- User Requirements
+- Business/Mission Requirements 
+- Systems Requirements 
+- Security Requirements 
+- Other Quality Requirements
+6. Describe Your Requirement Elicitation Process (use at least two elicitation techniques)
+7. Describe Your Requirement Validation and Analysis
