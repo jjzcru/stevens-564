@@ -31,6 +31,8 @@ entity "Merchant" as merchant {
   *email : text
   *password : text
   *address : text
+  *opening_hour: time 
+  *closing_hour: time 
 }
 
 entity "Product" as product {
@@ -40,6 +42,8 @@ entity "Product" as product {
   *description : text
   *picture : binary
   *weight : number
+  *price : number
+  *tags: [text]
 }
 
 entity "Order" as order {
