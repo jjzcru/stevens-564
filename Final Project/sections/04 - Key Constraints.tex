@@ -1,11 +1,9 @@
 \section{Key Constraints}
 \subsection{Business Constraints}
 \begin{enumerate}[label=CON-\arabic*]
-    \item Drivers are required to have a background check before being 
-    apply to be enroll in the platform.
-    \item Business are required to provide their opening and closing hours.
-    \item Drivers must have their own vehicle, transportation insurance and 
-    health insurance.
+    \item Drivers are required to have a background check before being applied to be enrolled in the platform.
+    \item Businesses are required to provide their opening and closing hours.
+    \item Drivers must have their vehicle, transportation insurance, and health insurance.
     \item Drivers must be over 18 years old.
     \item Merchants must have a business license.
 \end{enumerate}
@@ -13,20 +11,20 @@
 \begin{enumerate}[resume, label=CON-\arabic*]
     \item Developers can only use open source libraries or tools that are 
     either Apache or MIT license.
-    \item Google Pay, Apple Pay and PayPal are the only supported payment 
+    \item Google Pay, Apple Pay, and PayPal are the only supported payment 
     providers.
     \item The data interchange format must be JSON.
-    \item The authentication/authorization mechanism between applications 
-    is going to be JWT.
+    \item The authentication/authorization mechanism between applications is 
+    going to be JWT.
     \item JWT tokens are going to expired after 24 hours.
     \item The database that is going to be used in the project must be MySQL.
-    \item There is only one driver per session. \textit{A driver can't login 
-    in two devices at the same time.}
+    \item There is only one driver per session. \textit{A driver can't log in 
+    on two devices at the same time.}
     \item PSSS will only accept orders from the merchant opening hour to 60 
     minutes before the merchant closing time.
     \item Merchants are only going to be displayed to customers if they are 
     less than 2 miles from each outer.
-    \item All application must follow Google Material Design 
-    guidelines \cite{material-design-guidelines}.
+    \item All applications must follow Google Material Design 
+    guidelines. \cite{material-design-guidelines}.
     \item Images should take less than 10MB.
 \end{enumerate}
