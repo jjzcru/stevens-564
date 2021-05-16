@@ -531,24 +531,30 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
 \begin{enumerate}[label=SEC-\arabic*]
     \item The PSS shall require an email and password access to log in.
     \item PSS password must be no shorter than 8 characters, it requires
-    1 special character, and 2 numbers. \textit{Special character are 
-    any character under UTF-8, that is not an alphanumeric character}.
+    at least 1 special character, and at least 2 numbers. \textit{Special 
+    character are any character under UTF-8, that is not an alphanumeric 
+    character}.
     \item The PSS shall not store passwords in plain text, it shall salt the 
-    passwords and encrypt using SHA-2 algorithm.
+    passwords and encrypt them using SHA-2 algorithm.
     \item The PSS shall display an error message in the case of a failure in a 
     transaction in order to protect customer data.
     \item The PSS shall allow customers to file any reports with their orders 
     by sending an email to the support email address with the order number and 
     issue details.
     \item The PSS shall ask the customer whether or not their order has arrived 
-    if it is 1 hour after the driver, gets to the store.
+    if it is 1 hour after the driver gets to the store.
     \item The PSS shall allow users to delete their own account, this is also 
     shared with the PSMS and the PSDS.
     \item The PSS shall allow users to disable their own accounts for a certain 
     period of time up to 1 year.
+    \begin{itemize}
+        \item After 1 year, since the account is disabled, PSS will delete 
+        the account.
+    \end{itemize}
     \item The PSS shall not store any credit card information, it will use an 
-    authorized, PCI Compliant, provider to store the information. (PayPal).
-    \item The PSS shall ignore all network request that comes outside of US.
+    authorized, PCI Compliant, provider to store the 
+    information. \textit{PayPal}
+    \item The PSS shall ignore all network requests that come outside of the US.
     \item The PSSS shall log all information regarding the server status 
     into a log file.
     \begin{enumerate}[label=SEC-11.\arabic*]
@@ -558,7 +564,7 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
     \end{enumerate}
     \item PSSS shall considered that a request is coming from a secure 
     environment if the communication protocol is HTTPS and a 
-    valid JWT \cite{jwt} is sent in \textbf{Authorization} header.
+    valid JWT \cite{jwt} is sent inside the \textbf{Authorization} header.
     \item A security audit shall be performed in all the dependencies that 
     are add it to the project.
     \item A system security audit should be performed each year.
@@ -619,12 +625,13 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
 \subsubsection{Reliability}
 \begin{enumerate}[label=REL-\arabic*]
     \item No more than 5 orders out of 1,000 can be lost due to software errors.
-    \item The PSSS shall not be down for more than 3600 consecutive seconds.
+    \item The PSSS shall not be down for more than 3600 consecutive 
+    seconds. \textit{1 hour}.
 \end{enumerate}
 
 \subsubsection{Robustness}
 For the context of PSDS, PSMS, PSS offline means: \textit{The software is 
-running but it lose internet connection with the application server.}
+running but it loses internet connection with the application server.}
 
 \begin{enumerate}[label=ROB-\arabic*]
     \item If PSDS goes offline, it will try to reconnect to PSSS in 
@@ -655,11 +662,11 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     \item A first time user of PSS shall be able to sign up in no longer 
     than 2 minutes.
     \item A first time user of PSS shall be able to sign up in no longer 
-    than 20 seconds, if the user have a supported OAuth account.
+    than 20 seconds, if the user has a supported OAuth account.
     \item A first time user of PSS shall be able to sign in no longer 
     than 5 seconds.
     \item A first time user of PSS shall be able to sign in no longer 
-    than 3 seconds, if the user have a supported OAuth account.
+    than 3 seconds, if the user has a supported OAuth account.
     \item A first time user of PSS shall be able to search for an item and 
     add it to the cart in no longer than 20 seconds.
     \item A first time user of PSDS shall be able to sign in no longer 
@@ -692,7 +699,7 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     \item For the systems PSMS, PSS, PSDS, 98\% of first time users should be 
     able to use the applications without needing any help.
     \item A user of PSS should be able to create an order from an already 
-    filled car in no more than 4 interactions.
+    filled cart in no more than 4 interactions.
     \item A user of PSS should be able to create an order from an empty cart 
     in no more than 8 interactions. For an order of a single item.
     \item A user of PSDS should be able to complete a delivery in no more 
@@ -712,8 +719,8 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
 \subsubsection{Efficiency}
 \begin{enumerate}[label=EFF-\arabic*]
     \item The PSSS should used less than 70\% of the available CPU under 
-    regular condition. \textit{Regular Condition: 90\% of uptime}
-    \item The PSSS should used less than 500MB of RAM under regular condition.
+    regular conditions. \textit{Regular Condition: 90\% of uptime}
+    \item The PSSS should used less than 500MB of RAM under regular conditions.
 \end{enumerate}
 
 \subsubsection{Modifiability}
@@ -774,8 +781,8 @@ of views, buttons, actions and inputs that helps a user to achieve a goal}.
     gets 95\% of CPU or RAM utilized, which ever comes first. The system will 
     spin up 2 servers with the same operating system and environment 
     but with 80\% less memory than the original server.
-    \item The system will scale down to 1 (original server) if the one of the 
-    previous spin up server, has less than 95\% of CPU usage during 3600 
+    \item The system will scale down to 1 (original server) if one of the 
+    previous spin up servers, has less than 95\% of CPU usage during 3600 
     consecutive seconds.
 \end{enumerate}
 \subsubsection{Verifiability}
