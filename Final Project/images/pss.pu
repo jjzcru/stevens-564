@@ -1,0 +1,64 @@
+@startuml
+header Personal Shopping Assistant
+title Personal Shopper System
+caption Mobile - Web
+footer Team 4
+
+rectangle "Home page" as home
+rectangle "Login" as login
+rectangle "Sign Up" as sign_up
+rectangle "Confimation Code" as confirm_code
+rectangle "Display Cart" as cart
+rectangle "Display product detail" as product_detail 
+rectangle "Display Merchant details" as merchant_detail
+rectangle "Search product" as search_product 
+rectangle "Sort product" as sort_product 
+rectangle "Display product search results" as search_product_results
+rectangle "Shipping Address Details" as shipping_address
+rectangle "Payment Method Details" as payment_method
+rectangle "Confirmation Page" as confirmation
+rectangle "In Progress Page" as in_progress
+rectangle "Order details page" as order_detail
+
+card requires_login as "Logged On" {
+    rectangle "View Orders" as view_order
+    rectangle "Settings" as settings
+    rectangle "View Stored Payment methods" as stored_payment_methods
+    rectangle "View Stored Shipping addresses" as stored_shipping_address
+}
+
+home <-> cart: "Click on cart"
+home <--> merchant_detail : "Click on merchant"
+
+merchant_detail <-> product_detail
+merchant_detail <-> search_product : "Click on search icon"
+search_product <-> sort_product
+
+search_product <--> search_product_results: "User starts typing"
+search_product_results <--> product_detail: "Click on product"
+
+product_detail <--> cart: "Click on add to cart"
+cart <--> shipping_address
+shipping_address <--> payment_method
+payment_method <--> confirmation
+confirmation <--> in_progress: "Click confirm"
+
+in_progress --> order_detail
+order_detail --> home: "Click Continue"
+
+home <--> settings: "Click on Settings"
+home <--> login: "Click Login"
+login <--> sign_up: "Click 'If you do not have an account sign up'"
+sign_up <--> confirm_code: "Click 'I receive confirmation Code'"
+confirm_code --> home: "Click on Next"
+
+settings --> home: "Click on Sign Out"
+settings --> home: "Click on Back"
+settings <--> stored_payment_methods: "Click 'Payment Methods'"
+settings <--> stored_shipping_address: "Click 'Shipping Addresses'"
+settings <--> view_order: "Click Orders"
+
+
+
+
+@enduml

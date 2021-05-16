@@ -1,0 +1,61 @@
+\documentclass[a4paper,10pt]{article}
+\def\arraystretch{1.2}%
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{mdwlist}
+\usepackage[english]{babel}
+\usepackage[section]{placeins}
+{
+
+    %opening
+    \title{
+        Personalized Shopping Assistant \\ 
+        \small Team 4
+    }
+
+    \author{
+        Thomas Ripp
+        \and 
+        Joseph Mirabile
+        \and 
+        Jose Cruz
+    }
+
+    \date{
+        Stevens Institute of Technology \\
+        \small\today
+    } 
+
+    \begin{document}
+    \maketitle
+    \tableofcontents
+    \pagebreak
+}
+
+\newenvironment{packed_enum}{
+\begin{enumerate}[leftmargin=30pt, itemsep=0pt, parsep=0pt, font=\small]
+  \setlength{\itemsep}{5pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\input{./sections/01 - Mission Statement.tex}
+\pagebreak
+\input{./sections/02 - Key Stakeholders.tex}
+\pagebreak
+\input{./sections/03 - Key Drivers.tex}
+\pagebreak
+\input{./sections/04 - Key Constraints.tex}
+\pagebreak
+\input{./sections/05 - Key Requirements.tex}
+\pagebreak
+\input{./sections/06 - Elicitation Process.tex}
+\pagebreak
+\input{./sections/07 - VV.tex}
+\pagebreak
+\input{./sections/08 - Reference.tex}
+\pagebreak
+\input{./sections/09 - Appendix.tex}
+\end{document}

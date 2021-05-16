@@ -1,0 +1,67 @@
+\section{Specification}
+From the conversation that we have with our customers, they have particular 
+keywords that they use that help determine what kind of requirements they 
+are talking about. \newline
+
+\noindent If they use terms like market share, revenue, sales or terms that 
+are associated with money, we know that they are business requirements. \newline
+
+\noindent If the sentences include a functionality or a feature or something 
+that the system should be able to do is a \textbf{user requirement}, and during 
+the meeting we try to decompose those into what are the inputs and the expected 
+outputs of that functionality so we can use them later for validation and to 
+write the system requirements properly. \newline
+
+\noindent When we are talking about a particular feature, if the customer 
+specifies how it should be a particular function we categorize those as 
+\textbf{functional requirements}. \newline
+
+\noindent In this project they have two main focuses, regarding quality, these are 
+\textbf{speed} and \textbf{security}, anytime they mention the word fast, or 
+private data, we know that they are talking about quality attributes. \newline
+
+\noindent During the interviews we try to push them to figure out the system 
+edge cases, and also we ask them to imagine how the application should work 
+under certain conditions, this would be our \textbf{constraints}. \newline
+
+\noindent To figure out how many systems are we building, we use the previous 
+exercise to imagine how the application would work, the most frequent words 
+they use to describe the system is browser and apps, so we ask for 
+clarification on which browser, \textit{Mobile or Desktop}, and which 
+platform, \textit{iOS or Android}, are they talking about, this ones would be ours 
+\textbf{external interface requirements}. \newline
+
+\noindent In general, during the meeting anytime one of the customers uses 
+words like \textit{standard} or \textit{normal} we ask them to clarify those 
+to avoid ambiguity. \newline
+
+\noindent When they use terms like, \textit{perhaps}, \textit{maybe}, 
+\textit{could}, \textit{sometimes}, we move the conversation in a way that 
+they can evaluate all the possible cases and define what is the precise 
+requirements.  \newline
+
+\noindent If they are not able to articulate it, we take notes of that as a 
+comments and we tell them that we can't add that into the system unless they 
+define how the system should behave.
+
+\pagebreak
+
+\noindent If they provide some type of metric either distance or time, we ask 
+them to specify the unit and the values, this are the
+\textbf{performance requirements} \newline
+
+\noindent If they offer a solution to a problem or they make a feature
+request, we ask them:
+\begin{packed_enum}
+    \item How that solution or feature would help the user?
+    \item How the implementation would work?
+    \item What would be the required steps?
+    \item How the system should managed each edge cases?
+    \item Do we need to track new data for this feature?
+    \item Does that feature affects existing requirements?
+\end{packed_enum}
+ 
+\noindent Sometimes the solution is too ambiguous and the customers decide that they do 
+not understand the solution well enough to be added it to the requirements, 
+other times that solution creates new requirements and also changes 
+existing ones. \newline

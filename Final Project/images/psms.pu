@@ -1,0 +1,39 @@
+@startuml
+header Personal Shopping Assistant
+title Personal Shopper Merchant System
+footer Team 4
+
+rectangle "Login" as login
+
+
+card requires_login as "Logged On" {
+    rectangle "Home page" as home
+    rectangle "Add product" as add_product
+
+    rectangle "Sign out" as sign_out
+    rectangle "Product Detail" as product_detail
+    rectangle "Edit Product" as edit_product
+    rectangle "Delete Product" as delete_product
+    rectangle "Confirm Delete" as confirm_delete
+    rectangle "Cancel Delete" as cancel_delete
+}
+
+
+home --> sign_out: "Click on 'Sign Out'"
+home <-> add_product
+home <--> product_detail: "Click on Product"
+
+product_detail <-> edit_product
+product_detail <--> delete_product
+
+delete_product -> confirm_delete
+delete_product <-> cancel_delete
+
+confirm_delete -> home
+
+sign_out --> login
+login -> home
+
+
+
+@enduml

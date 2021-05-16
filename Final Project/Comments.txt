@@ -1,0 +1,84 @@
+Milestone #1: Mission Statement, Key Drivers, Key Constraints 
+-----------------------------------
+This is acceptable for getting started but several areas should be improved for your final paper:
+
+Your mission statement implies immediate delivery but doesn't actually say that. If your mission is to deliver goods from nearby stores immediately on order, you should say so.
+Your drivers are good, but there are more--since the pandemic is keeping some people from doing their own shopping. That should be a driver too.
+Constraints should be project-impacting in specific ways.  Does competition impose a constraint, or does it require of you a better selection of product?  Your Fast Product Market Fit similarly might not constrain you so much as force you to quickly come to terms with many stores.
+I would think the lack of Parking in Hoboken would be a driver encouraging more people to order in their goods.   In what ways will limited parking constrain your solution?
+The constraint you should be talking about with regard to your delivery staff is that of reliance on contracted drivers who provide their own vehicle and insurance.  Your description of this is not clear.
+
+
+Milestone # 2: Key Stakeholders, User Requirements, Business Requirements
+-----------------------------------
+This is pretty good--needs some polishing in terms of the clarity of the requirements (see comments below).
+
+The word is Customers -- Costumers supply costumes to people who need them.
+Your developers are probably key stakeholders as is the company or person who is will create and distribute the app and profit from it.
+
+You need to identify whose business requires the various business requirements.  15 transactions a day is very few--is that a goal per merchant? per driver?  per customer?
+per the entire app?  Ditto 50 transactions a day.  What is the "market" whose market share you are going after?  What is "product market fit?"  
+What do you mean by "Increase gross margin on partnered business"?  How are you defining gross margin ON partnered businesses?  How will you know if you improved UI/UX between the first and second year?  What is the monthly support cost referred to in the last business requirement?  Is that technical support or something else?
+
+Regarding your user reqs:
+Wouldn't merchants want to price their products (or are you assuming products are only added with a price)?  What is part of the product listing?  Your system requirements will have to fill that in.
+What are the categories your merchants want to group products into and how do that differ from the types of collections your merchants wants to group products into?
+If a customer has placed an order involving a merchant's product, wouldn't the merchant want to know that, and to hold that product out of stock to fulfill the order?
+
+Are drivers the only participants eligible to receive technical support?
+
+Mileston # 3: Systems Requirements, Security Requirements, Quality Requirements 
+-----------------------------------
+The content of this is excellent, but did Thomas and Joseph even read this?  I would have expected them to correct the many grammatical and usage mistakes made in the writing.  Before submitted as a final, please edit it thoroughly.
+
+Now to the content...
+
+Good glossary and thank you for labeling (numbering) your items.
+
+Your system requirements are very good--very specific and clear for the most part. Splitting the requirements by role is very sensible.  But the requirements that apply to all roles (like the login arrangements) should be pulled into a common section instead of being repeated in multiple sections.  Also, in general, you should not be requiring "buttons"--your requirements should call for capabilities that the developers and user-interface designers can provide in an appropriate way.  Where you have used the word "button", rewrite the requirement to avoid designing the UI.
+
+SY-3.2 could be misinterpreted and should be split into two requirements. SY-3.4 could be viewed as requiring the user to sign-up in the midst of signing in. Does that make sense?
+
+SY-6.1 has two "requests" - confusing language.  Say something like "PSS shall use the device GPS to locate registered merchants that are in a 2 mile
+radius from the customer position."
+
+SY-24.1 - Way too much UI design here!
+
+Your 4.1 requirements are not covering the entire day.  You appear to want 2 9's during "business hours" (9-7) 7 days a week? and 3 9's around the clock on holidays (but you have left off the hour from midnight to 1 a.m.), and 1 9 during certain hours (again missing midnight to 1 a.m.) on non-holidays.  I suggest you lay these requirements out in a table.  
+
+4.2 says the mobile app only available from Good Play Store.  What does INS-3 actually require?  INS-3 should be an assumption, not a requirement.
+
+4.3 can be simplified into one requirement--that HTTPS be the only data access protocol supported by the PSSS.
+
+4.4 would also benefit from being presented as a table of required response times.
+
+4.6 - the wording of the first 3 requirements is very confusing.  Rather than discussing which app is "online or "offline", present the connection/re-connection requirements.
+
+4.7 - Objectives for first-time users are good, but requirements for usability features (like error-corrections, undo, context-sensitive help, etc.) are more actionable.
+
+EFF-1 makes no sense.  REWRITE It.
+
+I'm giving Jose 100 for content, and Thomas and Joseph 95's for not editing this thoroughly.
+
+Mileston # 4: Requirement Elicitation Process and Validation & Analysis 
+-----------------------------------
+This is a far lengthier dissertation on your elicitation process than what is required. 
+Did you elicit requirements from anyone other than the proposing team (Samantha, Timothy, Alex and Kristin)?
+
+You appear to believe that your repeated meetings with your customers took care of your need to insure requirement clarity, comprehensibility, consistency, and correctness. Reviews of the actual written requirements are usually needed for that.
+
+
+Structure:
+------------------
+1. Your team name, your software project name, and your mission statement
+2. Clearly identify the key stakeholders for the project
+3. Key business/mission drivers - what drove you to think that this solution is needed/useful (what is your motivation to do this)
+4. Key constraints - what constraints did you need to consider for your project
+5.Key requirements:
+- User Requirements
+- Business/Mission Requirements 
+- Systems Requirements 
+- Security Requirements 
+- Other Quality Requirements
+6. Describe Your Requirement Elicitation Process (use at least two elicitation techniques)
+7. Describe Your Requirement Validation and Analysis

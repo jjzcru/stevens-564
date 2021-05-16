@@ -1,0 +1,65 @@
+@startuml
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Driver" as driver {
+  *id : number <<generated>>
+  --
+  *name : text
+  *last_name : text
+  *phone : text
+  *email : text
+  *password : text
+}
+
+entity "Customer" as customer {
+  *id : number <<generated>>
+  --
+  *name : text
+  *last_name : text
+  *phone : text
+  *email : text
+  *password : text
+}
+
+entity "Merchant" as merchant {
+  *id : number <<generated>>
+  --
+  *name : text
+  *phone : text
+  *email : text
+  *password : text
+  *address : text
+  *opening_hour: time 
+  *closing_hour: time 
+}
+
+entity "Product" as product {
+  *id : number <<generated>>
+  --
+  *name : text
+  *description : text
+  *picture : binary
+  *weight : number
+  *price : number
+  *tags: [text]
+}
+
+entity "Order" as order {
+  *id : number <<generated>>
+  --
+  *customer_id: number FK
+  *driver_id: number FK
+  *products: [Product]
+  *total: number
+  *subtotal: number
+  *tax: number
+}
+
+customer ||..o{ order
+driver ||..o{ order
+order ||..o{ product
+merchant ||..o{ product
+
+@enduml

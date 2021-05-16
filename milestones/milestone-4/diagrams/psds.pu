@@ -1,0 +1,41 @@
+@startuml
+header Personal Shopping Assistant
+title Personal Shopper Driver System
+footer Team 4
+
+rectangle "Login" as login
+
+card requires_login as "Logged On" {
+    rectangle "Home page" as home
+    rectangle "Order Summary" as order_summary
+    
+    rectangle "Accept Order" as accept_order
+    rectangle "Decline Order" as decline_order
+
+    rectangle "Display Order detail" as order_detail
+    rectangle "Display customer address" as customer_address
+    rectangle "Delivery Confirmation" as delivery_confirmation
+}
+
+
+home --> login: "Click on 'Sign Out'"
+login -> home: "Click on 'Login'"
+
+home <---> order_summary: "Click on Order"
+order_summary <--> accept_order
+order_summary <--> decline_order
+
+decline_order --> home: "Click on 'Decline'"
+
+accept_order --> order_detail: "Click 'Arrive at Merchant'"
+order_detail --> customer_address: "Click 'Complete Order'"
+customer_address --> delivery_confirmation: "Click 'Order Delivered'"
+
+delivery_confirmation --> home
+
+
+
+
+
+
+@enduml

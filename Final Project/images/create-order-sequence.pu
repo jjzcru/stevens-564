@@ -1,0 +1,11 @@
+@startuml
+actor       Customer    as customer
+boundary       PSSS        as psss
+actor       Driver      as driver
+actor       Merchant    as merchant
+
+
+customer -> psss: Authentication Request
+psss --> customer: Authentication Response
+
+@enduml
