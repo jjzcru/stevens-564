@@ -324,11 +324,11 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
 \pagebreak
 \subsubsection{Personal Shopper System}
 \begin{enumerate}[resume, label=SY-\arabic*]
-    \item PSS shall enable a customers to sign up:
+    \item PSS shall enable a customer to sign up:
     \newline \textit{Ref: USR-41}
     \begin{enumerate}[label=SY-5.\arabic*]
         \item PSS shall request that customer fill their information by
-        writing inside input text requesting the following fields:
+        writing inside an input text requesting the following fields:
         \begin{itemize}
             \item Name
             \item Last name
@@ -341,7 +341,7 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
         \item PSS shall display an error message if the format is incorrect.
         \item PSS shall display an error message if the passwords do not match.
     \end{enumerate}
-    \item PSS shall enable customers to signup into the platform by using an 
+    \item PSS shall enable customers to sign up into the platform by using an 
     authorized public OAuth implementation:
     \newline \textit{Ref: USR-41}
     \begin{itemize}
@@ -350,7 +350,7 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
     \end{itemize}
     \item PSS shall display a message that suggest the user to sign up in
     response to a failed login in case the email address that they 
-    insert does not exist in the platform
+    insert does not exist in the platform.
     \item The PSS shall enable customers to login into the platform by using 
     authorized public OAuth implementation:
     \newline \textit{Ref: USR-14}
@@ -404,12 +404,13 @@ System refers to all the user facing systems (PSS, PSMS, PSDS)
     \item When the cart has one or more items, PSS shall permit the user to 
     create an order.
     \newline \textit{Ref: USR-43}
-    \item PSS shall permit customer to cancel an order.
+    \item PSS shall permit customers to cancel an order.
     \newline \textit{Ref: USR-31}
-    \item PSS shall permit customer to confirm that they received an order.
+    \item PSS shall permit customers to confirm that they received an order.
     \newline \textit{Ref: USR-45}
     \item If the customer forgets its password, PSS shall request to user to 
-    enter its email address and shall an email with a temporary password.
+    enter their email address and shall send an email with a temporary 
+    password.
     \newline \textit{Ref: USR-44}
     \item If there is an issue with an order, PSS shall enable customers to 
     open an ticket about the order.
